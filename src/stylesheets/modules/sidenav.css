@@ -1,0 +1,139 @@
+/*
+ * Sidenav
+ * The purpose of this stylesheet is to define the styling and behavior of sidenav elements.
+ */
+
+
+/* Main Element */
+.sidenav {
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  height:100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+  animation: fadein 0.3s ease-in;
+}
+.sidenav.start {
+  justify-content: flex-start;
+}
+.sidenav.end {
+  justify-content: flex-end;
+}
+
+
+
+
+/* Sidenav Container */
+.sidenav section {
+  width: 270px;
+  height: 100%;
+  padding:15px;
+  overflow-y: scroll;
+  background-color: #FFFFFF;
+}
+
+
+/* Sidenav Header */
+.sidenav section header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidenav section header h2 {
+  margin: 0;
+  flex: 1;
+}
+
+/* Sidenav Links */
+.sidenav section article {
+  margin-top: 15px;
+}
+
+.sidenav section article .btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 5px;
+}
+
+
+
+
+
+
+/* **************************
+* RESPONSIVE MEDIA QUERIES *
+************************** */
+
+/*
+* DEVICE: Desktops
+* SCREEN: 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+
+}
+
+
+
+
+
+/*
+* DEVICE: Laptops, Desktops
+* SCREEN: B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+
+
+
+
+/*
+* DEVICE: Tablets, Ipads (portrait)
+* SCREEN: B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+
+
+
+
+/*
+* DEVICE: Tablets, Ipads (landscape)
+* SCREEN: B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+
+
+
+
+/*
+* DEVICE: Low Resolution Tablets, Mobiles (Landscape)
+* SCREEN: B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+
+
+
+
+/*
+* DEVICE: Most of the Smartphones Mobiles (Portrait)
+* SCREEN: 480px to lower resolution mobiles
+*/
+@media (max-width: 480px) {
+
+}

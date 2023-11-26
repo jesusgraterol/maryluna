@@ -20,6 +20,9 @@
 /* Buttons */
 @import url('modules/buttons.css');
 
+/* Sidenav */
+@import url('modules/sidenav.css');
+
 
 
 /* **********
@@ -38,7 +41,8 @@
   --light-text-color: #696161;
 
   --app-background-color: #f7f1f1;
-  --app-background-contrast-color: #ddd1d1;
+  --app-background-contrast-color: #e7e0e0;
+  /* --app-background-contrast-color: #ddd1d1; */
 
   --font-size: 16px;
   font-size: var(--font-size);
@@ -65,7 +69,7 @@
  * ROOT CONTAINER *
  **************** */
 html {
-  
+  scroll-behavior: smooth;
 }
 
 
