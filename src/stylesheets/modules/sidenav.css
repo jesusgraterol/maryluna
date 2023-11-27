@@ -33,9 +33,10 @@
   width: 270px;
   height: 100%;
   padding:15px;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #FFFFFF;
 }
+
 
 
 /* Sidenav Header */
@@ -55,13 +56,19 @@
   margin-top: 15px;
 }
 
-.sidenav section article .btn {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 12px 5px;
+.sidenav section article ul li {
+  margin: 20px 0;
 }
 
-
+.sidenav section article ul li a {
+  width: 100%;
+  color: inherit;
+}
+.sidenav section article ul li a:hover,
+.sidenav section article ul li a:focus {
+  color: var(--primary-color);
+  opacity: 0.8;
+}
 
 
 

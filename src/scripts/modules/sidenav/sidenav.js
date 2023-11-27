@@ -23,12 +23,7 @@ class Sidenav {
 
     // init the main el and subscribes to clicks within the parent
     this.#el = document.getElementById(sidenavID);
-    this.#el.addEventListener('click', (e) => {
-      // close if the background is clicked
-      if (e.target.id === sidenavID) this.close();
-
-      // close if a sidenav link has been clicked
-    });
+    this.#el.addEventListener('click', (e) => this.#onElementClick(e));
 
     // initialize the button instances
     this.#openEl = document.getElementById(`${sidenavID}Open`);
@@ -42,6 +37,10 @@ class Sidenav {
     document.addEventListener('keyup', (e) => { if (e.key === 'Escape') this.close(); });
   }
 
+
+
+
+
   /* *********
    * Getters *
    ********* */
@@ -49,6 +48,31 @@ class Sidenav {
   get isOpened() {
     return this.#isOpened;
   }
+
+
+
+
+
+  /* *********************
+   * ELEMENT CLICK EVENT *
+   ********************* */
+
+  /**
+   * Triggers whenever the sidenav element is clicked on and closes the sidenav if:
+   * - the background is clicked
+   * - a nav link is clicked
+   * @param {*} e
+   */
+  #onElementClick(e) {
+    if (
+      e.target.id === this.#el.id
+      || e.target instanceof HTMLAnchorElement
+      || e.target.parentNode instanceof HTMLAnchorElement
+    ) {
+      this.close();
+    }
+  }
+
 
 
 

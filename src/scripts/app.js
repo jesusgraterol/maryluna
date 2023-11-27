@@ -9,7 +9,7 @@ document.body.style['overflow-y'] = 'hidden'; */
  * App Config
  * ...
  */
-const config = {
+const CONFIG = {
 
 };
 
@@ -51,4 +51,4 @@ class App {
  * App Init
  * ...
  */
-const app = new App(config);
+const app = new App(CONFIG);

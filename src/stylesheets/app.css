@@ -20,6 +20,9 @@
 /* Buttons */
 @import url('modules/buttons.css');
 
+/* Anchors */
+@import url('modules/anchors.css');
+
 /* Sidenav */
 @import url('modules/sidenav.css');
 
@@ -106,6 +109,19 @@ hr {
   border-top: 1px solid var(--light-text-color);
   margin: 30px 0;
   border-radius: 5px;
+}
+
+
+
+
+/* *******
+ * LISTS *
+ ******* */
+ul, ol, dl {
+  margin: 0;
+}
+ul li, ol li, dl li {
+  margin: 15px 0;
 }
 
 
