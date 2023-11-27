@@ -117,10 +117,10 @@ hr {
 /* *******
  * LISTS *
  ******* */
-ul, ol, dl {
+ul, ol {
   margin: 0;
 }
-ul li, ol li, dl li {
+ul li, ol li {
   margin: 15px 0;
 }
 
