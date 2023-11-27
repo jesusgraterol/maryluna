@@ -68,6 +68,41 @@
 
 
 
+/* *****************
+ * HORIZONTAL RULE *
+ ***************** */
+hr { 
+  border-top: 1px solid var(--light-text-color);
+  margin: 30px 0;
+  border-radius: 5px;
+}
+
+
+
+
+/* *******
+ * LISTS *
+ ******* */
+ul, ol {
+  margin: 0;
+}
+ul li, ol li {
+  margin: 15px 0;
+}
+
+
+
+/* ********
+ * STRONG *
+ ******** */
+strong {
+  font-weight: bold;
+}
+
+
+
+
+
 /* ****************
  * ROOT CONTAINER *
  **************** */
@@ -95,35 +130,278 @@ body {
 #appContainer {
   width:100%;
   overflow-x: hidden;
-  padding: 15px;
+  animation: fadein 0.5s ease-in;
 }
 
 
 
 
 
-/* *****************
- * HORIZONTAL RULE *
- ***************** */
-hr { 
-  border-top: 1px solid var(--light-text-color);
-  margin: 30px 0;
-  border-radius: 5px;
+/* ************
+ * APP HEADER *
+ ************ */
+
+/* App Splash Container */
+.app-splash-container {
+  background-image: url('../assets/images/splash.jpg');
+  background-size: cover;
+  background-position: center;
+  position:relative;
+}
+
+.app-splash-container .inner {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 85vh;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+  z-index: 2;
+}
+
+/* Utilities */
+.app-splash-container .inner .spacer {
+  flex: 1;
+}
+
+/* Button States */
+.app-splash-container .inner .btn:not(.accent) {
+  font-size: 0.85rem;
+}
+
+.app-splash-container .inner .btn,
+.app-splash-container .inner .icon-btn {
+  color:white;
+}
+
+.app-splash-container .inner .btn:hover:not(.accent),
+.app-splash-container .inner .btn:focus:not(.accent),
+.app-splash-container .inner .icon-btn:hover,
+.app-splash-container .inner .icon-btn:focus {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 
+/* App Splash Header */
+.app-splash-container .inner header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+}
 
+.app-splash-container .inner header img {
+  max-width: 250px;
+}
 
-/* *******
- * LISTS *
- ******* */
-ul, ol {
+/* App Splash Header Navigation */
+.app-splash-container .inner header nav#desktopNavigationMenu ul {
+  display: inline-block;
+}
+.app-splash-container .inner header nav#desktopNavigationMenu ul li {
+  display: inline-block;
+}
+
+.app-splash-container .inner header nav#mobileNavigationMenu {
+  display: none;
+}
+
+/* App Splash Content */
+.app-splash-container .inner section {
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-splash-container .inner section article {
+  margin-top:-100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.app-splash-container .inner section article h1 {
+  font-size:2.9rem;
+  font-weight: 900;
   margin: 0;
 }
-ul li, ol li {
-  margin: 15px 0;
+.app-splash-container .inner section article p {
+  font-size:1.3rem;
+  font-weight: 900;
+  margin: 0;
+}
+.app-splash-container .inner section article h1,
+.app-splash-container .inner section article p {
+  color: white;
 }
 
+.app-splash-container .inner section article .actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* ****************
+ * MAIN CONTAINER *
+ **************** */
+main {
+
+}
+
+
+
+
+/* **********
+ * ABOUT US *
+ ********** */
+#aboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 15px;
+  background-color: #FFFFFF;
+}
+
+#aboutUs .spacer {
+  flex: 0.2;
+}
+
+#aboutUs article {
+  flex: 0.75;
+}
+
+#aboutUs article ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#aboutUs article ul li .md-icon {
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+#aboutUs aside {
+  flex: 1;
+}
+
+#aboutUs .actions,
+#aboutUs .mobile-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+#aboutUs .mobile-actions {
+  display: none;
+}
+
+
+
+
+/* **********
+ * SERVICES *
+ ********** */
+#services {
+  padding: 80px 15px;
+}
+
+/* Header */
+#services header {
+  text-align: center;
+}
+#services header h2 {
+  margin:0;
+}
+#services header p {
+  color: var(--light-text-color)
+}
+
+/* Service Cards Container */
+#services section {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Service Cards */
+#services section article {
+  margin:15px;
+  padding:15px;
+  text-align: center;
+  background-color: #FFFFFF;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+  width: min(300px, 100%)
+}
+#services section article:hover {
+  box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20);
+}
+
+#services section article h3 {
+  font-size: 1.4rem;
+}
+
+#services section article ul { 
+  text-align: left;
+}
+#services section article ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex=start;
+}
+#services section article ul li > .md-icon {
+  margin-right: 5px;
+}
+
+#services section article .btn {
+  font-weight: normal;
+  width: 100%;
+}
+
+
+
+
+/* **********
+ * LOCATION *
+ ********** */
+#location {
+  background-image: url('../assets/images/location.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#location .spacer {
+  flex: 0.33;
+}
+
+#location article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 50vh;
+}
+
+#location article .description {
+  flex: 1;
+  color:white;
+  text-align: center;
+}
+#location article .description h2 {
+  font-size:2.3rem;
+  font-weight: 900;
+}
+#location article .description p {
+  font-size:1.1rem;
+  font-weight: 900;
+}
 
 
 
@@ -135,6 +413,7 @@ ul li, ol li {
   bottom: 15px;
   right: 15px;
   animation: fadein 0.5s ease-in;
+  display: none;
 }
 
 
@@ -164,6 +443,14 @@ ul li, ol li {
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
 
+
+  /* **********
+   * ABOUT US *
+   ************ */
+   #aboutUs .spacer{
+    flex: 0;
+  }
+
 }
 
 
@@ -175,21 +462,69 @@ ul li, ol li {
 * SCREEN: B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* ************
+  * APP HEADER *
+  ************ */
+  .app-splash-container .inner header nav#desktopNavigationMenu {
+    display: none;
+  }
+  .app-splash-container .inner header nav#mobileNavigationMenu {
+    display: block;
+  }
+  
+  .app-splash-container .inner section article h1 {
+    font-size:2.45rem;
+  }
+  .app-splash-container .inner section article p {
+    font-size:1.2rem;
+  }
+  
+
+
+
+  /* **********
+   * ABOUT US *
+   ************ */
+  #aboutUs {
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 15px;
+  }
+
+  #aboutUs article {
+    flex: 1;
+  }
+
+  #aboutUs article h2 { 
+    text-align: center;
+  }
+
+  #aboutUs .actions {
+    display: none;
+  }
+  #aboutUs .mobile-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+
+
+  
+  /* **********
+  * LOCATION *
+  ********** */
+  #location .spacer {
+    flex: 0.1;
+  }
+
+
+
+  
+
+
 
 }
-
-
-
-
-
-/*
-* DEVICE: Tablets, Ipads (landscape)
-* SCREEN: B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-}
-
 
 
 
@@ -199,6 +534,67 @@ ul li, ol li {
 * SCREEN: B/w 481px to 767px
 */
 @media (min-width: 481px) and (max-width: 767px) {
+  /* ************
+  * APP HEADER *
+  ************ */
+  .app-splash-container .inner header nav#desktopNavigationMenu {
+    display: none;
+  }
+  .app-splash-container .inner header nav#mobileNavigationMenu {
+    display: block;
+  }
+  
+  .app-splash-container .inner section article h1 {
+    font-size:2.3rem;
+  }
+  .app-splash-container .inner section article p {
+    font-size:1.15rem;
+  }
+  
+
+
+
+  /* **********
+   * ABOUT US *
+   ************ */
+  #aboutUs {
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 15px;
+  }
+
+  #aboutUs article {
+    flex: 1;
+  }
+
+  #aboutUs article h2 { 
+    text-align: center;
+  }
+
+  #aboutUs .actions {
+    display: none;
+  }
+  #aboutUs .mobile-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+
+
+
+  /* **********
+  * LOCATION *
+  ********** */
+  #location .spacer {
+    flex: 0.1;
+  }
+
+
+
+  
+
+
 
 }
 
@@ -211,5 +607,98 @@ ul li, ol li {
 * SCREEN: 480px to lower resolution mobiles
 */
 @media (max-width: 480px) {
+  /* ************
+  * APP HEADER *
+  ************ */
+  .app-splash-container .inner header img {
+    max-width: 215px;
+  }
+
+  .app-splash-container .inner header nav#desktopNavigationMenu {
+    display: none;
+  }
+  .app-splash-container .inner header nav#mobileNavigationMenu {
+    display: block;
+  }
+  
+  .app-splash-container .inner section article h1 {
+    font-size:1.7rem;
+  }
+  .app-splash-container .inner section article p {
+    font-size:1rem;
+  }
+  
+  .app-splash-container .inner section article .actions {
+    margin-top: 15px;
+  }
+  .app-splash-container .inner section article .actions button:last-child {
+    display: none;
+  }
+  
+
+
+
+  /* **********
+   * ABOUT US *
+   ************ */
+  #aboutUs {
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 15px;
+  }
+
+  #aboutUs article {
+    flex: 1;
+  }
+
+  #aboutUs article h2 { 
+    text-align: center;
+  }
+
+  #aboutUs .actions {
+    display: none;
+  }
+  #aboutUs .mobile-actions {
+    display: flex;
+    justify-content: center;
+  }
+  #aboutUs .mobile-actions button:last-child {
+    display: none;
+  }
+
+
+
+  
+  /* **********
+  * SERVICES *
+  ********** */
+  #services {
+    padding: 45px 15px;
+  }
+
+  /* Service Cards Container */
+  #services section article {
+    margin: 15px 0;
+  }
+
+  /* **********
+  * LOCATION *
+  ********** */
+  #location .spacer {
+    flex: 0.05;
+  }
+
+  #location article {
+    min-height: 80vh;
+  }
+
+  #location article .description h2 {
+    font-size:2rem;
+    font-weight: 900;
+  }
+  #location article .description p {
+    font-size:1rem;
+    font-weight: 900;
+  }
 
 }

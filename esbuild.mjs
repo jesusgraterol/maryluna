@@ -14,6 +14,7 @@ const opts = {
   platform: 'browser',
   loader: {
     '.png': 'dataurl',
+    '.jpg': 'dataurl',
     '.woff': 'dataurl',
     '.woff2': 'dataurl',
     '.eot': 'dataurl',
