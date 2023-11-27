@@ -127,6 +127,19 @@ ul li, ol li {
 
 
 
+/* **********************
+ * SCROLL TO TOP BUTTON *
+ ********************** */
+#scrollToTopButton {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  animation: fadein 0.5s ease-in;
+}
+
+
+
+
 
 
 /* **************************

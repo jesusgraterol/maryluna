@@ -7,4 +7,4 @@ Project with Vanilla CSS, JavaScript, Jest & esbuild. For more information about
 
 A live demo of this solution can be accessed here:
 
-[https://jesusgraterol.github.io/maryluna/](https://jesusgraterol.github.io/maryluna/)
+[https://www.mar-y-luna.web.app](https://www.mar-y-luna.web.app)

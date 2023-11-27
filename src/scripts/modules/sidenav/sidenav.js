@@ -3,6 +3,9 @@
  * Handles the instance of an existing sidenav.
  */
 class Sidenav {
+  // the instance of the document's element
+  #documentEl;
+
   // the instance of the body's element
   #bodyEl;
 
@@ -17,7 +20,10 @@ class Sidenav {
   // the state of the sidenav
   #isOpened = false;
 
-  constructor(bodyEl, sidenavID) {
+  constructor(documentEl, bodyEl, sidenavID) {
+    // init the instance of the document element
+    this.#documentEl = documentEl;
+
     // init the body
     this.#bodyEl = bodyEl;
 
@@ -34,7 +40,7 @@ class Sidenav {
     this.#closeEl.addEventListener('click', () => this.close());
 
     // subscribe to keyboard actions and close the sidenav when escape is pressed
-    document.addEventListener('keyup', (e) => { if (e.key === 'Escape') this.close(); });
+    this.#documentEl.addEventListener('keyup', (e) => this.#onKeyboardClickUp(e));
   }
 
 
@@ -53,9 +59,9 @@ class Sidenav {
 
 
 
-  /* *********************
-   * ELEMENT CLICK EVENT *
-   ********************* */
+  /* ******************************
+   * ELEMENT/KEYBOARD CLICK EVENT *
+   ****************************** */
 
   /**
    * Triggers whenever the sidenav element is clicked on and closes the sidenav if:
@@ -69,6 +75,16 @@ class Sidenav {
       || e.target instanceof HTMLAnchorElement
       || e.target.parentNode instanceof HTMLAnchorElement
     ) {
+      this.close();
+    }
+  }
+
+  /**
+   * Triggers whenever a keyup event is emitted. The sidenav is closed if the escape key is pressed.
+   * @param {*} e
+   */
+  #onKeyboardClickUp(e) {
+    if (e.key === 'Escape') {
       this.close();
     }
   }
