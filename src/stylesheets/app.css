@@ -377,6 +377,7 @@ main {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
 #location .spacer {
@@ -390,12 +391,16 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   min-height: 70vh;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
 }
 
 #location article .description {
   flex: 1;
   color:white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #location article .description h2 {
   font-size:2.3rem;
@@ -403,8 +408,77 @@ main {
 }
 #location article .description p {
   font-size:1.1rem;
+  font-weight: 500;
+}
+#location article .description p strong {
   font-weight: 900;
 }
+
+#location article .description .btn {
+  margin-top: 15px;
+}
+
+
+
+
+/* *********
+ * GALLERY *
+ ********* */
+#gallery {
+  padding: 80px 15px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery .spacer {
+  flex: 0.2;
+}
+
+.gallery-content {
+  flex: 1;
+}
+
+/* Header */
+#gallery .gallery-content header {
+  text-align: center;
+}
+#gallery .gallery-content header h2 {
+  margin:0;
+}
+
+#gallery .gallery-content header span {
+  display: block;
+  margin-top: 15px;
+}
+#gallery .gallery-content header span a {
+  vertical-align: middle;
+  color: inherit;
+}
+#gallery .gallery-content header span a img {
+  width: 24px;
+  height:24px;
+}
+
+/* Grid */
+#gallery .gallery-content section {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;
+  gap: 15px;
+}
+
+#gallery .gallery-content section > div a img {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+}
+
+#gallery .gallery-content section > div a:hover {
+  opacity: 0.8;
+}
+
+
 
 
 
@@ -418,6 +492,16 @@ main {
   animation: fadein 0.5s ease-in;
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -452,6 +536,20 @@ main {
    ************ */
    #aboutUs .spacer{
     flex: 0;
+  }
+
+
+
+
+  /* *********
+   * GALLERY *
+   ********* */
+  #gallery .spacer {
+    flex: 0.05;
+  }
+
+  #gallery .gallery-content section > div:nth-child(n+10) {
+    display: none;
   }
 
 }
@@ -491,7 +589,6 @@ main {
   #aboutUs {
     flex-direction: column;
     align-items: center;
-    padding: 45px 15px;
   }
 
   #aboutUs article {
@@ -519,6 +616,20 @@ main {
   ********** */
   #location .spacer {
     flex: 0.1;
+  }
+
+
+
+
+  /* *********
+   * GALLERY *
+   ********* */
+  #gallery .spacer {
+    flex: 0.025;
+  }
+
+  #gallery .gallery-content section > div:nth-child(n+9) {
+    display: none;
   }
 
 
@@ -563,7 +674,6 @@ main {
   #aboutUs {
     flex-direction: column;
     align-items: center;
-    padding: 45px 15px;
   }
 
   #aboutUs article {
@@ -591,6 +701,20 @@ main {
   ********** */
   #location .spacer {
     flex: 0.1;
+  }
+
+
+
+
+  /* *********
+   * GALLERY *
+   ********* */
+  #gallery .spacer {
+    flex: 0.025;
+  }
+
+  #gallery .gallery-content section > div:nth-child(n+5) {
+    display: none;
   }
 
 
@@ -647,7 +771,6 @@ main {
   #aboutUs {
     flex-direction: column;
     align-items: center;
-    padding: 45px 15px;
   }
 
   #aboutUs article {
@@ -675,14 +798,15 @@ main {
   /* **********
   * SERVICES *
   ********** */
-  #services {
-    padding: 45px 15px;
-  }
 
   /* Service Cards Container */
   #services section article {
     margin: 15px 0;
   }
+
+
+
+
 
   /* **********
   * LOCATION *
@@ -704,4 +828,17 @@ main {
     font-weight: 900;
   }
 
+
+
+
+  /* *********
+   * GALLERY *
+   ********* */
+  #gallery .spacer {
+    flex: 0;
+  }
+
+  #gallery .gallery-content section > div:nth-child(n+5) {
+    display: none;
+  }
 }
