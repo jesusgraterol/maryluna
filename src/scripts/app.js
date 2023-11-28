@@ -50,6 +50,9 @@ class App {
 
     // init the instance of the company services
     this.#companyServices = new CompanyServices(this.#dialog, 'services', 'data-dialog-id');
+
+    // Set the current year on the footer
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
   }
 }
 

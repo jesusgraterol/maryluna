@@ -481,6 +481,81 @@ main {
 
 
 
+/* **********
+ * CONTACT *
+ ********** */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 15px;
+}
+
+#contact .spacer {
+  flex: 0.3;
+}
+
+#contact article {
+  flex: 0.75;
+}
+
+#contact article ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#contact article ul li .md-icon {
+  margin-right: 5px;
+}
+#contact article ul li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+#contact aside {
+  flex: 1;
+  padding:0 35px;
+}
+
+#contact aside a > img {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+}
+
+#contact aside a:hover {
+  opacity: 0.9;
+}
+
+#contact .actions {
+  margin-top: 30px;
+}
+#contact .actions img {
+  max-width: 250px;
+}
+
+
+
+/* ********
+ * FOOTER *
+ ******** */
+footer {
+  background-color: var(--primary-color);
+  padding: 25px 15px;
+}
+
+footer p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+footer p a {
+  color: #FFFFFF;
+}
+
+
+
+
 
 /* **********************
  * SCROLL TO TOP BUTTON *
@@ -550,6 +625,24 @@ main {
 
   #gallery .gallery-content section > div:nth-child(n+10) {
     display: none;
+  }
+
+
+
+
+  /* *********
+   * CONTACT *
+   ********* */
+  #contact .spacer {
+    flex: 0.03;
+  }
+
+  #contact article h2 { 
+    margin: 0;
+  }
+
+  #contact aside {
+    padding: 15px;
   }
 
 }
@@ -630,6 +723,24 @@ main {
 
   #gallery .gallery-content section > div:nth-child(n+9) {
     display: none;
+  }
+
+
+
+
+  /* *********
+   * CONTACT *
+   ********* */
+  #contact .spacer {
+    flex: 0;
+  }
+
+  #contact article h2 { 
+    margin: 0;
+  }
+
+  #contact aside {
+    padding: 10px;
   }
 
 
@@ -715,6 +826,35 @@ main {
 
   #gallery .gallery-content section > div:nth-child(n+5) {
     display: none;
+  }
+  
+
+
+
+  /* *********
+   * CONTACT *
+   ********* */
+  #contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact article {
+    flex: 1;
+  }
+
+  #contact article h2 { 
+    text-align: center;
+    margin: 0;
+  }
+
+  #contact article .actions {
+    text-align: center;
+  }
+
+  #contact aside {
+    margin-top: 15px;
+    padding: 0;
   }
 
 
@@ -840,5 +980,34 @@ main {
 
   #gallery .gallery-content section > div:nth-child(n+5) {
     display: none;
+  }
+  
+
+
+
+  /* *********
+   * CONTACT *
+   ********* */
+  #contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact article {
+    flex: 1;
+  }
+
+  #contact article h2 { 
+    text-align: center;
+    margin: 0;
+  }
+
+  #contact article .actions {
+    text-align: center;
+  }
+
+  #contact aside {
+    margin-top: 15px;
+    padding: 0;
   }
 }
