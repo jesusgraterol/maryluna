@@ -205,7 +205,7 @@
                   <span class="md-icon">arrow_right</span> Bote de seguridad
                 </li>
               </ul>
-              <button class="btn">
+              <button class="btn" data-dialog-id="lessons">
                 Más información
               </button>
             </article>
@@ -227,7 +227,7 @@
                   <span class="md-icon">arrow_right</span> Seguro incluido
                 </li>
               </ul>
-              <button class="btn">
+              <button class="btn" data-dialog-id="rent">
                 Más información
               </button>
             </article>
@@ -249,7 +249,7 @@
                   <span class="md-icon">arrow_right</span> Otras actividades
                 </li>
               </ul>
-              <button class="btn">
+              <button class="btn" data-dialog-id="accomodation">
                 Más información
               </button>
             </article>
@@ -265,10 +265,10 @@
             <div class="description">
               <h2>Ubicación</h2>
               <p>
-                <strong>Playa El Yaque</strong> es un destino de <strong>windsurf</strong> de renombre 
+                <strong>Playa El Yaque</strong> es un destino de <strong>kiteboarding</strong> de renombre 
                 mundial debido a sus constantes vientos alisios, aguas poco profundas, instalaciones 
                 de primer nivel y clima tropical. Esta combinación de factores lo convierte en un 
-                lugar ideal para practicantes de windsurf de todos los niveles, desde principiantes 
+                lugar ideal para practicantes de kiteboarding de todos los niveles, desde principiantes 
                 hasta expertos.
               </p>
             </div>
@@ -286,7 +286,7 @@
 
 
 
-    <!-- Sidenav -->
+    <!-- Mobile Sidenav -->
     <aside id="mobileSidenav" class="sidenav end">
 
       <section>
@@ -332,8 +332,24 @@
 
     </aside>
 
+    <!-- Dialog -->
+    <dialog id="dialog">
+
+      <header>
+        <h2 id="dialogTitle"><!-- Handled by dialog.js --></h2>
+        <button class="icon-btn" id="dialogClose" aria-label="Cerrar Ventana Emergente" autofocus>
+          <span aria-hidden="true" class="md-icon">close</span>
+        </button>
+      </header>
+
+      <article id="dialogContent"><!-- Handled by dialog.js --></article>
+      
+    </dialog>
+
+
     <!-- Scroll To Top Button -->
-    <button class="icon-btn primary fab raised" id="scrollToTopButton" aria-label="Scroll to top">
+    <button class="icon-btn primary fab raised" id="scrollToTopButton" 
+            aria-label="Ir al tope de la página">
       <span class="md-icon" aria-hidden="true">arrow_upward</span>
     </button>
 

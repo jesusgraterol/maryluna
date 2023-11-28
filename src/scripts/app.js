@@ -1,21 +1,11 @@
 import Sidenav from './modules/sidenav';
+import Dialog from './modules/dialog';
 import ScrollToTopButton from './modules/scroll-to-top-button';
-
-/**
- * App Config
- * ...
- */
-const CONFIG = {
-
-};
-
-
-
-
+import CompanyServices from './modules/company-services';
 
 /**
  * App Class
- * ...
+ * The entry point of the application that instantiates all the essential modules.
  */
 class App {
   // the instance of the document's element
@@ -30,10 +20,16 @@ class App {
   // the instance of the mobile sidenav
   #mobileSidenav;
 
+  // the instance of the dialog
+  #dialog;
+
   // the instance of the scroll to top button
   #scrollToTop;
 
-  constructor(config) {
+  // the instance of the company services
+  #companyServices;
+
+  constructor() {
     // init the instance of the document's element
     this.#documentEl = document.documentElement;
 
@@ -41,13 +37,19 @@ class App {
     this.#bodyEl = document.body;
 
     // init the instance of the app's container element
-    this.#appContainerEl = document.getElementById(config.appContainerID);
+    this.#appContainerEl = document.getElementById('appContainer');
 
     // init the instance of the mobile sidenav
     this.#mobileSidenav = new Sidenav(this.#documentEl, this.#bodyEl, 'mobileSidenav');
 
+    // init the instance of the dialog
+    this.#dialog = new Dialog(this.#bodyEl, 'dialog');
+
     // init the instance of the scroll to top button
     this.#scrollToTop = new ScrollToTopButton(this.#documentEl, 'scrollToTopButton');
+
+    // init the instance of the company services
+    this.#companyServices = new CompanyServices(this.#dialog, 'services', 'data-dialog-id');
   }
 }
 
@@ -57,7 +59,7 @@ class App {
 
 /**
  * App Init
- * ...
+ * The app is initialized once it has been fully instantiated.
  */
 // eslint-disable-next-line no-unused-vars
-const app = new App(CONFIG);
+const app = new App();
